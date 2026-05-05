@@ -287,6 +287,27 @@ img {
     }
 }
 
+/* Fix sovrapposizione su smartphone */
+@media (max-width: 600px) {
+    .nav-container {
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .nav-brand-cursive {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        font-size: 1.5rem;
+        flex: 1;
+        text-align: center;
+        z-index: auto;
+    }
+    .nav-mobile-wrapper {
+        flex-shrink: 0;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
