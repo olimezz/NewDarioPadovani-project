@@ -21,25 +21,30 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="container nav-container">
-            <nav class="nav-links">
-                <a href="#" class="active">HOME</a>
-                <a href="#">Aiutaci a migliorare</a>
-                <a href="#">Servizi</a>
-                <a href="#">Attività</a>
-                <a href="#">Calendario</a>
-            </nav>
-            
+            <div class="nav-mobile-wrapper">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Apri menu">
+                    <i class="ph ph-list"></i>
+                    <span class="menu-btn-label">Altro</span>
+                </button>
+            </div>
+
             <div class="nav-brand-cursive">New Dario Padovani</div>
 
             <div class="nav-actions">
                 <a href="https://wa.me/3757407689" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="ph ph-umbrella"></i> PRENOTA IL TUO OMBRELLONE</a>
             </div>
-            <div class="nav-mobile-wrapper">
-                <button class="mobile-menu-btn">
-                    <i class="ph ph-list"></i>
-                </button>
-            </div>
         </div>
+
+        <!-- Dropdown Menu -->
+        <nav class="nav-dropdown" id="nav-dropdown" aria-hidden="true">
+            <div class="nav-dropdown-inner">
+                <a href="#" class="active">HOME</a>
+                <a href="#">Aiutaci a migliorare</a>
+                <a href="#">Servizi</a>
+                <a href="#">Attività</a>
+                <a href="#">Calendario</a>
+            </div>
+        </nav>
     </header>
 
     <main>
