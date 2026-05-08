@@ -966,3 +966,77 @@ img {
         flex-direction: column;
     }
 }
+
+/* Partnership Section */
+.partnership-section {
+    padding: 80px 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid rgba(0,119,182,0.1);
+}
+
+.partnership-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: var(--color-bg-light);
+    padding: 50px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0,119,182,0.1);
+}
+
+.partnership-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.partnership-text p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+    .partnership-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+}
+
+/* Partnerships Page Specific */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 60px 0;
+}
+
+.partner-card {
+    background: white;
+    border-radius: var(--border-radius-sm);
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.partner-logo {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.partner-card h3 {
+    margin-bottom: 15px;
+}
+
+.partner-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}

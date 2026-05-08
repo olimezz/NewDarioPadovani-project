@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le partnership di Dario Padovani. Scopri le collaborazioni locali.">
+    <title>Partnership | Dario Padovani</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .partners-hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(to bottom, var(--color-bg-light), white);
+            text-align: center;
+        }
+        
+        .partners-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .partners-hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .back-home {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="nav-mobile-wrapper">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Apri menu">
+                    <i class="ph ph-list"></i>
+                    <span class="menu-btn-label">Altro</span>
+                </button>
+            </div>
+
+            <div class="nav-brand-cursive">New Dario Padovani</div>
+
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">TORNA ALLA HOME</a>
+            </div>
+        </div>
+        
+        <!-- Dropdown Menu -->
+        <nav class="nav-dropdown" id="nav-dropdown" aria-hidden="true">
+            <div class="nav-dropdown-inner">
+                <a href="index.html">HOME</a>
+                <a href="#">Aiutaci a migliorare</a>
+                <a href="#">Servizi</a>
+                <a href="#">Attività</a>
+                <a href="#">Calendario</a>
+                <a href="partnerships.html" class="active">Partnership</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="partners-hero">
+            <div class="container">
+                <div class="hero-logo-wrapper" style="margin-bottom: 30px;">
+                    <img src="assets/logo.png" alt="Dario Padovani Logo" class="hero-logo-img" style="width: 120px; border-radius: 50%; aspect-ratio: 1/1; object-fit: cover;">
+                </div>
+                <h1>Le Nostre Partnership</h1>
+                <p>Crediamo nel valore del territorio. Per questo collaboriamo con partner d'eccellenza per garantire ai nostri ospiti un'esperienza completa e ricca di vantaggi.</p>
+                <div class="back-home">
+                    <a href="index.html" class="btn btn-primary"><i class="ph ph-arrow-left"></i> TORNA ALLA HOME</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="partnerships-list">
+            <div class="container">
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-hotel"></i></div>
+                        <h3>Hotel Riviera</h3>
+                        <p>Convenzioni speciali per il soggiorno dei nostri ospiti e pacchetti spiaggia inclusi.</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-fork-knife"></i></div>
+                        <h3>Ristorante Il Veliero</h3>
+                        <p>Sconti esclusivi sulle cene à la carte per chi prenota un ombrellone stagionale.</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-car"></i></div>
+                        <h3>Rent & Go</h3>
+                        <p>Servizio di noleggio auto e bici con consegna direttamente presso lo stabilimento.</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-wine"></i></div>
+                        <h3>Cantine del Borgo</h3>
+                        <p>Degustazioni guidate e sconti sull'acquisto di vini locali per i nostri clienti.</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-mountains"></i></div>
+                        <h3>Abruzzo Experience</h3>
+                        <p>Tour guidati nell'entroterra abruzzese con partenza facilitata da Montesilvano.</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-logo"><i class="ph ph-barbell"></i></div>
+                        <h3>Fitness Beach Gym</h3>
+                        <p>Accesso agevolato ai corsi di yoga e pilates mattutini in spiaggia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content" style="padding-top: 0;">
+            <div class="footer-col brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.png" alt="Dario Padovani Logo" class="logo-img-footer" style="max-width: 100px;">
+                </a>
+            </div>
+            <div class="footer-col contacts">
+                <p>&copy; 2025 New Dario Padovani. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Semplice toggle per il menu mobile su questa pagina
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const dropdown = document.getElementById('nav-dropdown');
+        
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            const isActive = dropdown.classList.toggle('active');
+            dropdown.setAttribute('aria-hidden', !isActive);
+        });
+    </script>
+</body>
+
+</html>
