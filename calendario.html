@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calendario attività e appuntamenti dello Stabilimento Balneare Dario Padovani.">
+    <title>Calendario | Dario Padovani</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .calendar-section {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #ffffff 100%);
+            min-height: 80vh;
+        }
+
+        .calendar-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .calendar-header h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 4.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .calendar-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .day-card {
+            background: var(--glass-white);
+            backdrop-filter: blur(12px);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0, 119, 182, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .day-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--color-secondary);
+        }
+
+        .day-card:nth-child(even)::before {
+            background: var(--color-accent);
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .day-card h3 {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed rgba(0, 119, 182, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .activity-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .activity-item {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .activity-time {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--color-accent);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .activity-name {
+            font-weight: 500;
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+
+        .back-home {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="nav-mobile-wrapper">
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Apri menu">
+                    <i class="ph ph-list"></i>
+                    <span class="menu-btn-label">Altro</span>
+                </button>
+            </div>
+
+            <div class="nav-brand-cursive">New Dario Padovani</div>
+
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">TORNA ALLA HOME</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <nav class="nav-dropdown" id="nav-dropdown" aria-hidden="true">
+            <div class="nav-dropdown-inner">
+                <a href="index.html">HOME</a>
+                <a href="index.html#">Aiutaci a migliorare</a>
+                <a href="index.html#">Servizi</a>
+                <a href="index.html#">Attività</a>
+                <a href="calendario.html" class="active">Calendario</a>
+                <a href="partnerships.html">Partnership</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="calendar-section">
+            <div class="container">
+                <div class="calendar-header">
+                    <h1><i class="ph ph-calendar-check text-yellow"></i> Calendario Attività</h1>
+                    <p>Scopri il programma della settimana e unisciti a noi per vivere giornate all'insegna del divertimento, dello sport e del relax.</p>
+                </div>
+
+                <div class="days-grid">
+                    <!-- Lunedì -->
+                    <div class="day-card">
+                        <h3>Lunedì</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 09:00 - 10:00</div>
+                                <div class="activity-name">Risveglio Muscolare</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 16:00 - 17:00</div>
+                                <div class="activity-name">Torneo di Beach Volley</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Martedì -->
+                    <div class="day-card">
+                        <h3>Martedì</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 10:00 - 11:30</div>
+                                <div class="activity-name">Acquagym</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 17:00 - 18:30</div>
+                                <div class="activity-name">Balli di Gruppo</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mercoledì -->
+                    <div class="day-card">
+                        <h3>Mercoledì</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 09:30 - 10:30</div>
+                                <div class="activity-name">Yoga in Spiaggia</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 16:30 - 18:00</div>
+                                <div class="activity-name">Animazione per Bambini</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Giovedì -->
+                    <div class="day-card">
+                        <h3>Giovedì</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 10:00 - 11:00</div>
+                                <div class="activity-name">Pilates</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 18:00 - 19:30</div>
+                                <div class="activity-name">Aperitivo in Musica</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Venerdì -->
+                    <div class="day-card">
+                        <h3>Venerdì</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 09:00 - 10:00</div>
+                                <div class="activity-name">Risveglio Muscolare</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 21:00 - 23:30</div>
+                                <div class="activity-name">Serata Discomusic</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sabato -->
+                    <div class="day-card">
+                        <h3>Sabato</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 10:00 - 12:00</div>
+                                <div class="activity-name">Giochi in Acqua</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 16:00 - 19:00</div>
+                                <div class="activity-name">DJ Set on the Beach</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domenica -->
+                    <div class="day-card">
+                        <h3>Domenica</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 11:00 - 12:30</div>
+                                <div class="activity-name">Torneo di Bocce</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-time"><i class="ph ph-clock"></i> 17:00 - 19:00</div>
+                                <div class="activity-name">Schiuma Party</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="back-home">
+                    <a href="index.html" class="btn btn-primary"><i class="ph ph-arrow-left"></i> TORNA ALLA HOME</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C320,120 420,0 720,60 C1020,120 1120,0 1440,60 L1440,120 L0,120 Z" fill="#0d47a1"></path>
+            </svg>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-col brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.png" alt="Dario Padovani Logo" class="logo-img-footer" style="max-width: 180px;">
+                </a>
+            </div>
+            <div class="footer-col contacts">
+                <h4>Contatti</h4>
+                <ul>
+                    <li><i class="ph ph-phone"></i> +39 375 740 7689</li>
+                    <li><i class="ph ph-envelope-simple"></i> info@dariopadovani.it</li>
+                    <li><i class="ph ph-map-pin"></i> Viale Aldo Moro 135, 65015 Montesilvano (PE)</li>
+                </ul>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/stabilimentodariopadovani" target="_blank"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="https://www.instagram.com/newdariopadovani/" target="_blank"><i class="ph-fill ph-instagram-logo"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Semplice toggle per il menu mobile su questa pagina se main.js non lo fa già
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const dropdown = document.getElementById('nav-dropdown');
+            
+            if (menuBtn && dropdown) {
+                // Rimuoviamo i vecchi listener se ci sono per sicurezza
+                const newBtn = menuBtn.cloneNode(true);
+                menuBtn.parentNode.replaceChild(newBtn, menuBtn);
+                
+                newBtn.addEventListener('click', () => {
+                    newBtn.classList.toggle('active');
+                    const isActive = dropdown.classList.toggle('active');
+                    dropdown.setAttribute('aria-hidden', !isActive);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
