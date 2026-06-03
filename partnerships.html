@@ -203,6 +203,39 @@
                             }
                         </script>
                     </div>
+                    <div class="partner-card">
+                        <div class="partner-logo">
+                            <img src="assets/logo_ilbosso.jpeg" alt="Il Bosso Logo" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin: 0 auto; display: block;">
+                        </div>
+                        <h3>IL BOSSO</h3>
+                        <p style="text-align: left; font-size: 0.95rem; margin-bottom: 5px;">
+                            Dal 1999, <strong>Il Bosso</strong> è il punto di riferimento in Abruzzo per il turismo esperienziale e sostenibile.<br>
+                            La loro visione unisce natura, cultura e responsabilità sociale, trasformando ogni escursione in un viaggio autentico e di crescita personale.<span id="bosso-dots">...</span><span id="bosso-more-text" style="display: none;"><br><br>
+                            Scopri l'Abruzzo più vero attraverso le loro attività outdoor, come l'indimenticabile canoa sul fiume Tirino, trekking ed e-bike, con un approccio rigenerativo che valorizza il territorio e le comunità locali. Con Il Bosso, il turismo non è un semplice svago, ma uno strumento per tutelare l'ambiente e rivitalizzare i nostri splendidi borghi.</span>
+                        </p>
+                        <button onclick="toggleBossoText()" id="bosso-read-more-btn" style="background: none; border: none; color: var(--color-primary); padding: 0; cursor: pointer; font-weight: 700; font-size: 0.95rem; text-decoration: underline; text-align: left; margin-bottom: 15px;">Leggi di più</button>
+                        
+                        <script>
+                            function toggleBossoText() {
+                                var dots = document.getElementById("bosso-dots");
+                                var moreText = document.getElementById("bosso-more-text");
+                                var btnText = document.getElementById("bosso-read-more-btn");
+                        
+                                if (dots.style.display === "none") {
+                                    dots.style.display = "inline";
+                                    btnText.innerHTML = "Leggi di più";
+                                    moreText.style.display = "none";
+                                } else {
+                                    dots.style.display = "none";
+                                    btnText.innerHTML = "Leggi meno";
+                                    moreText.style.display = "inline";
+                                }
+                            }
+                        </script>
+                        <div class="partner-action" style="margin-top: 25px;">
+                            <a href="https://www.ilbosso.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Scopri di più <i class="ph ph-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
