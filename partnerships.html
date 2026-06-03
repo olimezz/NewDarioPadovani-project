@@ -298,6 +298,20 @@
             const isActive = dropdown.classList.toggle('active');
             dropdown.setAttribute('aria-hidden', !isActive);
         });
+
+        // Apre automaticamente la descrizione estesa se si arriva col link #hakunamatata
+        window.addEventListener('load', () => {
+            if (window.location.hash === '#hakunamatata') {
+                const dots = document.getElementById("hakuna-dots");
+                const moreText = document.getElementById("hakuna-more-text");
+                const btnText = document.getElementById("hakuna-read-more-btn");
+                if (dots && moreText && btnText) {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "Leggi meno";
+                    moreText.style.display = "inline";
+                }
+            }
+        });
     </script>
 </body>
 
