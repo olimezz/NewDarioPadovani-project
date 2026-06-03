@@ -95,6 +95,15 @@ img {
     background-color: #ffb700;
 }
 
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: #0096c7;
+}
+
 .btn-outline {
     background-color: transparent;
     color: var(--color-primary);
