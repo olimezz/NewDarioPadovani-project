@@ -236,39 +236,7 @@
                             <a href="https://www.ilbosso.com/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Scopri di più <i class="ph ph-arrow-right"></i></a>
                         </div>
                     </div>
-                    <div class="partner-card" id="hakunamatata">
-                        <div class="partner-logo">
-                            <img src="assets/logo_hakunamatata.jpeg" alt="Hakuna Matata Logo" style="width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin: 0 auto; display: block;">
-                        </div>
-                        <h3>HAKUNA MATATA</h3>
-                        <p style="text-align: left; font-size: 0.95rem; margin-bottom: 5px;">
-                            <strong>Zero pensieri, 100% sorrisi!</strong><br>
-                            Vuoi organizzare una festa di compleanno davvero indimenticabile? Hakuna Matata è la soluzione perfetta per trasformare ogni evento in un'esperienza magica ed esplosiva per i più piccoli.<span id="hakuna-dots">...</span><span id="hakuna-more-text" style="display: none;"><br><br>
-                            Grazie ai nostri fantastici gonfiabili e a un'animazione ricca di energia, i bambini vivranno momenti di puro divertimento in totale sicurezza, mentre i genitori potranno rilassarsi e godersi la festa. Lasciati coinvolgere dalla gioia e crea ricordi unici insieme a noi!</span>
-                        </p>
-                        <button onclick="toggleHakunaText()" id="hakuna-read-more-btn" style="background: none; border: none; color: var(--color-primary); padding: 0; cursor: pointer; font-weight: 700; font-size: 0.95rem; text-decoration: underline; text-align: left; margin-bottom: 15px;">Leggi di più</button>
-                        
-                        <script>
-                            function toggleHakunaText() {
-                                var dots = document.getElementById("hakuna-dots");
-                                var moreText = document.getElementById("hakuna-more-text");
-                                var btnText = document.getElementById("hakuna-read-more-btn");
-                        
-                                if (dots.style.display === "none") {
-                                    dots.style.display = "inline";
-                                    btnText.innerHTML = "Leggi di più";
-                                    moreText.style.display = "none";
-                                } else {
-                                    dots.style.display = "none";
-                                    btnText.innerHTML = "Leggi meno";
-                                    moreText.style.display = "inline";
-                                }
-                            }
-                        </script>
-                        <div class="partner-action" style="margin-top: 25px;">
-                            <a href="https://wa.me/393397870073" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Scopri di più <i class="ph ph-arrow-right"></i></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -299,19 +267,7 @@
             dropdown.setAttribute('aria-hidden', !isActive);
         });
 
-        // Apre automaticamente la descrizione estesa se si arriva col link #hakunamatata
-        window.addEventListener('load', () => {
-            if (window.location.hash === '#hakunamatata') {
-                const dots = document.getElementById("hakuna-dots");
-                const moreText = document.getElementById("hakuna-more-text");
-                const btnText = document.getElementById("hakuna-read-more-btn");
-                if (dots && moreText && btnText) {
-                    dots.style.display = "none";
-                    btnText.innerHTML = "Leggi meno";
-                    moreText.style.display = "inline";
-                }
-            }
-        });
+
     </script>
 </body>
 
